@@ -1,0 +1,11 @@
+<div>
+    <input type="text" ng-model="ctrl.user.userName" class="form-control" autocomplete="off" ng-change="inputChange(ctrl.user.userName)" placeholder="手机号或邮箱" required>
+    <div class="complete-container" style="z-index:9999" ng-if="showList">
+        <div class='complete-item'>
+            {{ placeHolder }}
+        </div>
+        <div class='complete-item' ng-repeat="item in emailList" ng-click="setUserName(item)">
+            {{ item }}
+        </div>
+    </div>
+</div>
